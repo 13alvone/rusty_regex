@@ -10,10 +10,14 @@ use {
 
 fn make_replacements(_string: String) -> String {
     let references = BTreeMap::from([
-        ("\\system32\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"), // For Windows Paths
-        ("\\System32\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"), // For Windows Paths
-        ("\\sysWOW64\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"), // For Windows Paths
-        ("\\SysWOW64\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"), // For Windows Paths
+        // Windows Paths
+        ("\\system32\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"),
+        ("\\System32\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"),
+        ("\\sysWOW64\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"),
+        ("\\SysWOW64\\", "\\(s|S)ys(tem32|WOW64|wow64)\\"),
+        ("\\WINDOWS\\", "\\(WINDOWS|windows|Windows)\\"),
+        ("\\Windows\\", "\\(WINDOWS|windows|Windows)\\"),
+        ("\\windows\\", "\\(WINDOWS|windows|Windows)\\"),
     ]);
 
     let mut new_string = _string;
