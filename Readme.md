@@ -5,7 +5,7 @@ This project provides a binary that takes an input string, and preps it for rege
 > For Installing Rust and Cargo (Rust's Project Management Binary), please see: https://www.rust-lang.org/tools/install
 > Then, run the following lines in terminal:
 ```sh
-git clone https://git.corp.tanium.com/christopher-speakes/rusty_regex.git
+git clone https://github.com/13alvone/rusty_regex.git
 cd rusty_regex
 cargo build --bins --release
 mv rusty_regex /usr/local/bin
